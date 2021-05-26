@@ -1,3 +1,4 @@
+{{-- Blade que laravel fourni avec style par défaut --}}
 @component('mail::message')
 # Introduction
 

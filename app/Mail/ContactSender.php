@@ -10,12 +10,14 @@ use Illuminate\Queue\SerializesModels;
 class ContactSender extends Mailable
 {
     use Queueable, SerializesModels;
+    //création de variable
     public $mail;
     /**
      * Create a new message instance.
      *
      * @return void
      */
+
     public function __construct($request)
     {
         $this->mail = $request;
@@ -27,7 +29,7 @@ class ContactSender extends Mailable
      * @return $this
      */
     public function build()
-    {                                          //view
+    {                                         //view                    //objet du mail
         return $this->from($this->mail->mail)->markdown('mail.contact')->subject('test Subject');
     }
 }

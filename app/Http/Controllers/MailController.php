@@ -11,10 +11,10 @@ class MailController extends Controller
 {
     public function store(Request $request)
     {
-        //welcome inscription
+        //welcome inscription - to dynamique
         // Mail::to($request->mail)->send(new MailSender($request));
 
-        //formulaire de contact
+        //formulaire de contact - to défini
         Mail::to('ayhan@molengeek.com')->send(new ContactSender($request));
         return redirect()->back();
     }

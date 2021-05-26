@@ -19,4 +19,5 @@ Route::get('/', function () {
 });
 
 
+//post mail
 Route::post('/mail', [MailController::class, 'store'])->name('mail');

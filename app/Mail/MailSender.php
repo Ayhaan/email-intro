@@ -28,7 +28,6 @@ class MailSender extends Mailable
      */
     public function build()
     {
-        //Message welcome inscription
         return $this->from('ayhan@molengeek.com')->view('mail.welcome');
     }
 }
